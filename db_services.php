@@ -2,7 +2,7 @@
     $servername ="localhost";
     $username ="root";
     $password ="";
-    $dbnme ="cars";
+    $dbnme ="services";
 
 
     //Create connection
