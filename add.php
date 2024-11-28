@@ -2,16 +2,16 @@
     include 'db.php';
     
     if($_SERVER["REQUEST_METHOD"]=="POST"){
-        $model =$_POST['model'];
-        $brand =$_POST['brand'];
-        $year =$_POST['year'];
+        $service_name =$_POST['service_name'];
+        $description =$_POST['description'];
+        $duration =$_POST['duration'];
         $price =$_POST['price'];
 
-        if (!empty($model)&& !empty ($brand)&& !empty ($year)&& !empty ($price)){
-            $sql= "INSERT INTO units (model, brand, year, price) VALUES ('$model','$brand','$year','$price')";
+        if (!empty($service_name)&& !empty ($description)&& !empty ($duration)&& !empty ($price)){
+            $sql= "INSERT INTO units (service_name, description, duration, price) VALUES ('$service_name','$description','$duration','$price')";
 
             if ($conn->query($sql)=== TRUE){
-                echo "New Data Acquired!";
+                echo "New Service Added!";
             }else{
                 echo "FAILED";
             }
@@ -26,15 +26,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Car</title>
+    <title>Add New Service</title>
 </head>
 <body>
-    <h2>Add new Rides</h2>
+    <h2>Add new Service</h2>
 
     <form method = "post" action="add.php">
-        Model: <input type="text" name="model"><br><br>
-        Make: <input type="text" name="brand"><br><br>
-        Year: <input type="text" name="year"><br><br>
+        Service Name: <input type="text" name="service_name"><br><br>
+        Description: <input type="text" name="description"><br><br>
+        Duration: <input type="text" name="duration"><br><br>
         Price: <input type="text" name="price"><br><br>
         <input type="submit" value ="Submit"><br><br>
     </form>
