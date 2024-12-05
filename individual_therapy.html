@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Therapy | Mind & Mingle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .hero-section {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1500&q=80');
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .therapy-process {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+
+        .process-step {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .therapist-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .therapist-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .therapist-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .therapist-info {
+            padding: 1.5rem;
+        }
+
+        .therapist-specialties {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .specialty-tag {
+            background: var(--secondary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .faq-section {
+            margin: 3rem 0;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .process-step {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .step-number {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Mind & Mingle</h1>
+        <p class="tagline">Where Sanity Meets Serenity</p>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h2>Individual Therapy</h2>
+            <p>Your journey to self-discovery and healing begins here</p>
+            <a href="book_session.html" class="btn">Book Your Session</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-lock feature-icon"></i>
+                <h3>Confidential Space</h3>
+                <p>Your privacy is our top priority. All sessions are completely confidential.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-heart-circle-check feature-icon"></i>
+                <h3>Personalized Approach</h3>
+                <p>Therapy tailored to your unique needs and goals.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-calendar-check feature-icon"></i>
+                <h3>Flexible Scheduling</h3>
+                <p>Choose from various time slots that work best for you.</p>
+            </div>
+        </section>
+
+        <section class="therapy-process">
+            <h2>Your Therapy Journey</h2>
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Initial Consultation</h3>
+                    <p>A 15-minute free consultation to discuss your needs and ensure we're the right fit.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Assessment Session</h3>
+                    <p>Deep dive into your history, concerns, and goals to create a personalized treatment plan.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Regular Sessions</h3>
+                    <p>Weekly or bi-weekly sessions to work towards your goals and track progress.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Progress Review</h3>
+                    <p>Regular check-ins to evaluate progress and adjust treatment plans as needed.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="therapist-section">
+            <h2>Meet Our Therapists</h2>
+            <div class="therapist-card">
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80" 
+                     alt="Dr. Sarah Wilson" class="therapist-image">
+                <div class="therapist-info">
+                    <h3>Dr. Sarah Wilson</h3>
+                    <p>Licensed Clinical Psychologist with 10+ years of experience in individual therapy.</p>
+                    <div class="therapist-specialties">
+                        <span class="specialty-tag">Anxiety</span>
+                        <span class="specialty-tag">Depression</span>
+                        <span class="specialty-tag">Trauma</span>
+                        <span class="specialty-tag">Self-esteem</span>
+                    </div>
+                </div>
+            </div>
+            <div class="therapist-card">
+                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&q=80" 
+                     alt="Dr. Michael Chen" class="therapist-image">
+                <div class="therapist-info">
+                    <h3>Dr. Michael Chen</h3>
+                    <p>Specialized in Cognitive Behavioral Therapy with expertise in stress management.</p>
+                    <div class="therapist-specialties">
+                        <span class="specialty-tag">Stress</span>
+                        <span class="specialty-tag">CBT</span>
+                        <span class="specialty-tag">Career</span>
+                        <span class="specialty-tag">Relationships</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <p class="faq-question">How long does each session last?</p>
+                <p>Individual therapy sessions typically last 50 minutes.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">How often should I attend therapy?</p>
+                <p>Most clients start with weekly sessions and adjust frequency based on progress and needs.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">Is therapy covered by insurance?</p>
+                <p>We accept most major insurance plans. Contact us to verify your coverage.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">Can I switch therapists if needed?</p>
+                <p>Yes, we understand the importance of finding the right fit and will help you transition if needed.</p>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin: 4rem 0;">
+            <h2>Ready to Begin Your Journey?</h2>
+            <p>Take the first step towards a healthier, happier you.</p>
+            <a href="book_session.html" class="btn">Schedule Your First Session</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> hello@mindandmingle.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Location</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Serenity Lane</p>
+                    <p>Peaceful City, PC 12345</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Mind & Mingle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Session | Mind & Mingle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css\book.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Mind & Mingle</h1>
+        <p class="tagline">Where Sanity Meets Serenity</p>
+    </header>
+
+    <div class="container">
+        <div class="booking-image">
+            <img src="https://images.unsplash.com/photo-1598257006626-48b0c252070d?w=800&q=80" 
+                 alt="Peaceful therapy room">
+            <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?w=800&q=80" 
+                 alt="Calming environment">
+            <img src="https://images.unsplash.com/photo-1545987796-200677ee1011?w=800&q=80" 
+                 alt="Meditation space">
+        </div>
+
+        <div class="booking-form">
+            <h2>Book Your Therapy Session</h2>
+            <p>Take the first step towards a better tomorrow. Fill out the form below to schedule your session.</p>
+            
+            <div class="success-message" id="successMessage">
+                Booking successful! We'll contact you shortly to confirm your appointment.
+            </div>
+
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label>Select Session Type</label>
+                    <div class="session-types">
+                        <div class="session-type" onclick="selectSessionType(this, 'individual')">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80" 
+                                 alt="Individual Therapy">
+                            <h3><i class="fas fa-user"></i> Individual</h3>
+                            <p>One-on-one counseling</p>
+                        </div>
+                        <div class="session-type" onclick="selectSessionType(this, 'couples')">
+                            <img src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?w=800&q=80" 
+                                 alt="Couples Therapy">
+                            <h3><i class="fas fa-heart"></i> Couples</h3>
+                            <p>Relationship counseling</p>
+                        </div>
+                        <div class="session-type" onclick="selectSessionType(this, 'group')">
+                            <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80" 
+                                 alt="Group Therapy">
+                            <h3><i class="fas fa-users"></i> Group</h3>
+                            <p>Group therapy sessions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Preferred Time</label>
+                    <select id="time" name="time" required>
+                        <option value="">Select a time</option>
+                        <option value="9:00">9:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" name="notes" placeholder="Tell us briefly about what brings you here..."></textarea>
+                </div>
+
+                <button type="submit" class="btn">Schedule Session</button>
+            </form>
+
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function selectSessionType(element, type) {
+            // Remove selected class from all session types
+            document.querySelectorAll('.session-type').forEach(el => {
+                el.classList.remove('selected');
+            });
+            // Add selected class to clicked element
+            element.classList.add('selected');
+        }
+
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            // Scroll to top of form
+            document.querySelector('.booking-form').scrollIntoView({ behavior: 'smooth' });
+            // Reset form
+            this.reset();
+            // Remove selected session type
+            document.querySelectorAll('.session-type').forEach(el => {
+                el.classList.remove('selected');
+            });
+        });
+    </script>
+</body>
+</html>

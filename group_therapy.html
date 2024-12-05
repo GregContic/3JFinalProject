@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Therapy | Mind & Mingle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .hero-section {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=1500&q=80');
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .group-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .group-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .group-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .group-info {
+            padding: 1.5rem;
+        }
+
+        .group-schedule {
+            background: var(--secondary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .benefits-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+
+        .benefit-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+
+        .benefit-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .faq-section {
+            margin: 3rem 0;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .benefit-item {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .benefit-icon {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Mind & Mingle</h1>
+        <p class="tagline">Where Sanity Meets Serenity</p>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h2>Group Therapy</h2>
+            <p>Connect, Share, and Heal Together</p>
+            <a href="book_session.html" class="btn">Join a Group</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-users feature-icon"></i>
+                <h3>Supportive Community</h3>
+                <p>Connect with others who understand your journey.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-comments feature-icon"></i>
+                <h3>Shared Learning</h3>
+                <p>Gain insights from diverse perspectives and experiences.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-hand-holding-heart feature-icon"></i>
+                <h3>Safe Environment</h3>
+                <p>Express yourself freely in a judgment-free space.</p>
+            </div>
+        </section>
+
+        <section class="group-types">
+            <h2>Our Group Sessions</h2>
+            <div class="group-card">
+                <img src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?w=800&q=80" 
+                     alt="Anxiety Support Group" class="group-image">
+                <div class="group-info">
+                    <h3>Anxiety Support Group</h3>
+                    <p>Learn coping strategies and share experiences with others managing anxiety.</p>
+                    <span class="group-schedule">Tuesdays 6:00 PM - 7:30 PM</span>
+                </div>
+            </div>
+            <div class="group-card">
+                <img src="https://images.unsplash.com/photo-1553524913-efba3f0b533d?w=800&q=80" 
+                     alt="Mindfulness Group" class="group-image">
+                <div class="group-info">
+                    <h3>Mindfulness & Meditation</h3>
+                    <p>Practice mindfulness techniques and develop a meditation routine.</p>
+                    <span class="group-schedule">Thursdays 5:30 PM - 7:00 PM</span>
+                </div>
+            </div>
+            <div class="group-card">
+                <img src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?w=800&q=80" 
+                     alt="Relationship Workshop" class="group-image">
+                <div class="group-info">
+                    <h3>Relationship Workshop</h3>
+                    <p>Explore relationship patterns and build better connections.</p>
+                    <span class="group-schedule">Saturdays 10:00 AM - 11:30 AM</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <h2>Benefits of Group Therapy</h2>
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="benefit-content">
+                    <h3>Shared Experience</h3>
+                    <p>Connect with others who truly understand what you're going through.</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="benefit-content">
+                    <h3>Different Perspectives</h3>
+                    <p>Gain new insights and approaches to handling challenges.</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="benefit-content">
+                    <h3>Support Network</h3>
+                    <p>Build a community of support that extends beyond therapy sessions.</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="benefit-content">
+                    <h3>Cost-Effective</h3>
+                    <p>Get valuable therapeutic support at a more affordable price point.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-grid">
+            <h2>Group Member Stories</h2>
+            <div class="testimonial-card">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&q=80" 
+                     alt="Emily R." class="testimonial-image">
+                <p>"The anxiety support group has been life-changing. It's comforting to know I'm not alone in this journey."</p>
+                <h4>Emily R.</h4>
+            </div>
+            <div class="testimonial-card">
+                <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&q=80" 
+                     alt="Mark T." class="testimonial-image">
+                <p>"The mindfulness group helped me develop practical tools for managing stress in my daily life."</p>
+                <h4>Mark T.</h4>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <p class="faq-question">How many people are in each group?</p>
+                <p>Our groups typically have 6-10 members to ensure everyone gets adequate time to participate.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">Do I need to commit to all sessions?</p>
+                <p>While consistent attendance is encouraged for the best results, we understand that life happens. Just let us know if you need to miss a session.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">What if I'm nervous about sharing in a group?</p>
+                <p>You can participate at your own comfort level. There's no pressure to share until you're ready.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">Can I try a session before committing?</p>
+                <p>Yes! We offer a free introductory session to help you determine if the group is right for you.</p>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin: 4rem 0;">
+            <h2>Ready to Join a Group?</h2>
+            <p>Take the first step towards connection and growth.</p>
+            <a href="book_session.html" class="btn">Schedule Your First Session</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> hello@mindandmingle.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Location</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Serenity Lane</p>
+                    <p>Peaceful City, PC 12345</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Mind & Mingle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couples Therapy | Mind & Mingle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .hero-section {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?w=1500&q=80');
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .relationship-goals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .goal-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .goal-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .goal-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .goal-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+
+        .goal-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .goal-list li:before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .process-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+
+        .process-timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .timeline-content {
+            padding-bottom: 2rem;
+        }
+
+        .therapist-section {
+            margin: 3rem 0;
+        }
+
+        .therapist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .therapist-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .therapist-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .therapist-info {
+            padding: 1.5rem;
+        }
+
+        .specialties {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .specialty-tag {
+            background: var(--secondary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .success-stories {
+            margin: 3rem 0;
+        }
+
+        .story-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .couple-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .quote {
+            font-style: italic;
+            margin: 1rem 0;
+            color: var(--text-color);
+        }
+
+        @media (max-width: 768px) {
+            .timeline-item {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .timeline-number {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Mind & Mingle</h1>
+        <p class="tagline">Where Sanity Meets Serenity</p>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h2>Couples Therapy</h2>
+            <p>Strengthen Your Bond, Rebuild Your Connection</p>
+            <a href="book_session.html" class="btn">Book Your Session</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-heart feature-icon"></i>
+                <h3>Rebuild Trust</h3>
+                <p>Restore and strengthen the foundation of your relationship.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-comments feature-icon"></i>
+                <h3>Better Communication</h3>
+                <p>Learn effective ways to express needs and listen to each other.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-hand-holding-heart feature-icon"></i>
+                <h3>Deepen Connection</h3>
+                <p>Rediscover intimacy and emotional closeness.</p>
+            </div>
+        </section>
+
+        <section class="relationship-goals">
+            <h2>What We Address</h2>
+            <div class="goal-card">
+                <img src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?w=800&q=80" 
+                     alt="Communication" class="goal-image">
+                <div class="goal-content">
+                    <h3>Communication Issues</h3>
+                    <ul class="goal-list">
+                        <li>Breaking negative communication patterns</li>
+                        <li>Learning active listening skills</li>
+                        <li>Expressing needs effectively</li>
+                        <li>Managing conflict constructively</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="goal-card">
+                <img src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?w=800&q=80" 
+                     alt="Trust" class="goal-image">
+                <div class="goal-content">
+                    <h3>Trust & Intimacy</h3>
+                    <ul class="goal-list">
+                        <li>Rebuilding trust after challenges</li>
+                        <li>Strengthening emotional connection</li>
+                        <li>Improving physical intimacy</li>
+                        <li>Creating deeper understanding</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="goal-card">
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80" 
+                     alt="Growth" class="goal-image">
+                <div class="goal-content">
+                    <h3>Growth & Future</h3>
+                    <ul class="goal-list">
+                        <li>Setting shared goals</li>
+                        <li>Planning for the future</li>
+                        <li>Managing life transitions</li>
+                        <li>Balancing individual needs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="process-section">
+            <h2>Our Approach</h2>
+            <div class="process-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>Initial Consultation</h3>
+                        <p>Meet with your therapist to discuss your relationship goals and concerns.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>Assessment</h3>
+                        <p>Identify relationship patterns, strengths, and areas for growth.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>Tailored Treatment</h3>
+                        <p>Develop strategies and tools specific to your relationship needs.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>Practice & Growth</h3>
+                        <p>Implement new skills and track progress together.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="therapist-section">
+            <h2>Our Couples Therapists</h2>
+            <div class="therapist-grid">
+                <div class="therapist-card">
+                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&q=80" 
+                         alt="Dr. Lisa Martinez" class="therapist-image">
+                    <div class="therapist-info">
+                        <h3>Dr. Lisa Martinez</h3>
+                        <p>Certified Gottman Method Couples Therapist with 15+ years of experience helping couples rebuild and strengthen their relationships.</p>
+                        <div class="specialties">
+                            <span class="specialty-tag">Pre-marital</span>
+                            <span class="specialty-tag">Communication</span>
+                            <span class="specialty-tag">Conflict Resolution</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="therapist-card">
+                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=800&q=80" 
+                         alt="Dr. James Wilson" class="therapist-image">
+                    <div class="therapist-info">
+                        <h3>Dr. James Wilson</h3>
+                        <p>Specializing in Emotionally Focused Therapy (EFT) for couples dealing with trust issues and emotional disconnection.</p>
+                        <div class="specialties">
+                            <span class="specialty-tag">Trust Building</span>
+                            <span class="specialty-tag">Intimacy</span>
+                            <span class="specialty-tag">Trauma Recovery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="success-stories">
+            <h2>Success Stories</h2>
+            <div class="story-card">
+                <img src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?w=150&q=80" 
+                     alt="Sarah and John" class="couple-image">
+                <p class="quote">"After 15 years of marriage, we had grown apart. The tools and guidance we received helped us rediscover our connection and fall in love again."</p>
+                <h4>Sarah & John, Together 15 years</h4>
+            </div>
+            <div class="story-card">
+                <img src="https://images.unsplash.com/photo-1623082574085-157d955f1d35?w=150&q=80" 
+                     alt="Mike and David" class="couple-image">
+                <p class="quote">"The communication techniques we learned have transformed our relationship. We now understand each other better than ever."</p>
+                <h4>Mike & David, Together 5 years</h4>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin: 4rem 0;">
+            <h2>Ready to Strengthen Your Relationship?</h2>
+            <p>Take the first step towards a deeper connection.</p>
+            <a href="book_session.html" class="btn">Schedule Your First Session</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> hello@mindandmingle.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Location</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Serenity Lane</p>
+                    <p>Peaceful City, PC 12345</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Mind & Mingle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

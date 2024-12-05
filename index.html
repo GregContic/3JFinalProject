@@ -1,73 +1,108 @@
+<?php include 'db.php'; ?>
 <!DOCTYPE html>
-<!-- Source Codes By CodingNepal - www.codingnepalweb.com -->
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login Form</title>
-  <link rel="stylesheet" href="css/login.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind & Mingle | Your Path to Peace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-  <div class="login_form">
-    <!-- Login form container -->
-    <form method="get">
-      <h3>Log in as</h3>
-      <br>
+    <header>
+        <h1 class="logo">Mind & Mingle</h1>
+        <p class="tagline">Where Sanity Meets Serenity</p>
+    </header>
 
-      <!--  
-      <-- Email input box --a>
-      <div class="input_box">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter email address" required />
-      </div>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h2>Begin Your Journey to Well-being</h2>
+            <p>Take the first step towards a happier, healthier you.</p>
+            <a href="book_session.html" class="btn">Book Your Session</a>
+        </div>
+    </div>
 
-      <-- Password input box --a>
-      <div class="input_box">
-        <div class="password_title">
-          <label for="password">Password</label>
-          <a href="#">Forgot Password?</a>
+    <div class="container">
+        <section class="about-section">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80" alt="Peaceful therapy space">
+            </div>
+            <div class="about-content">
+                <h2>Welcome to Mind & Mingle</h2>
+                <p>We believe in creating a safe, nurturing space where you can explore your thoughts and feelings freely. Our experienced therapists are here to support you on your journey to mental wellness.</p>
+            </div>
+        </section>
+
+        <h2 class="services-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80" alt="Individual Therapy">
+                <i class="fas fa-brain service-icon"></i>
+                <h3>Individual Therapy</h3>
+                <p>One-on-one sessions tailored to your unique needs and goals.</p>
+                <a href="individual_therapy.html" class="btn">Learn More</a>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80" alt="Group Sessions">
+                <i class="fas fa-users service-icon"></i>
+                <h3>Group Sessions</h3>
+                <p>Connect and grow with others in a supportive environment.</p>
+                <a href="group_therapy.html" class="btn">Learn More</a>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?w=800&q=80" alt="Couples Therapy">
+                <i class="fas fa-heart service-icon"></i>
+                <h3>Couples Therapy</h3>
+                <p>Strengthen your relationship with professional guidance.</p>
+                <a href="couples_therapy.html" class="btn">Learn More</a>
+            </div>
         </div>
 
-        <input type="password" id="password" placeholder="Enter your password" required />
-      </div>
-        -->
-       <!-- Login button -->
-       <button type="submit" formaction="admin_dashboard.html">Admin</button>
-       <button type="submit" formaction="client_dashboard.html">Client</button>
-      <!--
-      <p class="sign_up">Don't have an account? <a href="register.html">Sign up</a></p>
-      <p id="errorMessage" style="color: red; display: none;">Invalid email or password</p>
-    
-      -->
-      </form>
-  </div>
-  <script>
-    // Function to handle form submission
-    document.getElementById("loginForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevents the default form submission
+        <section class="testimonials">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&q=80" alt="Client 1" class="testimonial-image">
+                    <p>"Mind & Mingle has completely transformed my life. The therapists here are incredibly supportive and professional."</p>
+                    <h4>Sarah M.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80" alt="Client 2" class="testimonial-image">
+                    <p>"The group sessions have helped me connect with others and realize I'm not alone in my journey."</p>
+                    <h4>James R.</h4>
+                </div>
+            </div>
+        </section>
+    </div>
 
-      // Get input values
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-      const errorMessage = document.getElementById("errorMessage");
-
-      // Basic validation
-      if (!email || !password) {
-        errorMessage.textContent = "Please enter both email and password.";
-        errorMessage.style.display = "block";
-        return;
-      }
-
-      // Simulate login process
-      if (email === "user@example.com" && password === "password123") {
-        alert("Login successful!");
-        errorMessage.style.display = "none";
-        // Redirect or further actions could go here
-      } else {
-        errorMessage.textContent = "Invalid email or password.";
-        errorMessage.style.display = "block";
-      }
-    });
-  </script>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> hello@mindandmingle.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Location</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Serenity Lane</p>
+                    <p>Peaceful City, PC 12345</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Mind & Mingle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
