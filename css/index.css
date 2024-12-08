@@ -27,7 +27,9 @@ header {
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-family: "Sarala", sans-serif;
+    text-align: cen;
     margin-bottom: 1rem;
 }
 
@@ -57,17 +59,20 @@ header {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
     padding: 2rem;
 }
 
 .hero-content h2 {
+    font-family: "Sarala";
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-family: "Actor";
+    font-size: 1.5rem;
+    font-style: normal;
     margin-bottom: 2rem;
 }
 
@@ -212,6 +217,7 @@ footer {
     display: inline-block;
     padding: 0.8rem 1.5rem;
     background-color: var(--accent-color);
+    font-weight: bold;
     color: white;
     text-decoration: none;
     border-radius: 5px;

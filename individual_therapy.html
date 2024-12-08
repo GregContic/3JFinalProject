@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Individual Therapy | Mind & Mingle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Actor&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sarala:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/index.css">
     <style>
@@ -12,7 +15,9 @@
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                         url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1500&q=80');
         }
-
+        * h2{
+            font-size: 2rem;
+        }
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -36,11 +41,15 @@
 
         .therapy-process {
             background: white;
-            padding: 3rem;
+            padding: 2rem;
             border-radius: 10px;
             margin: 3rem 0;
         }
-
+        .therapy-process h2{
+            padding-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-size: 2rem;            
+        }
         .process-step {
             display: grid;
             grid-template-columns: auto 1fr;
@@ -151,7 +160,7 @@
                 <p>Your privacy is our top priority. All sessions are completely confidential.</p>
             </div>
             <div class="feature-card">
-                <i class="fas fa-heart-circle-check feature-icon"></i>
+                <i class="fa-solid fa-heart feature-icon"></i>
                 <h3>Personalized Approach</h3>
                 <p>Therapy tailored to your unique needs and goals.</p>
             </div>
