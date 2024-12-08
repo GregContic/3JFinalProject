@@ -2,7 +2,7 @@
 :root {
     --primary-color: #7C9A92;
     --secondary-color: #F4EBE2;
-    --accent-color: #D4A373;
+    --accent-color: #ac7b4a;
     --text-color: #2C3639;
 }
 
@@ -65,7 +65,7 @@ header {
 
 .booking-form {
     background: white;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
@@ -141,6 +141,7 @@ header {
     padding: 1rem 2rem;
     background-color: var(--accent-color);
     color: white;
+    font-weight: bold;
     text-decoration: none;
     border: none;
     border-radius: 5px;

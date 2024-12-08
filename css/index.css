@@ -1,7 +1,7 @@
 :root {
     --primary-color: #7C9A92;
     --secondary-color: #F4EBE2;
-    --accent-color: #D4A373;
+    --accent-color: #ac7b4a;
     --text-color: #2C3639;
 }
 
@@ -11,7 +11,10 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+* h2{
+    font-size: 2rem;
+    color:#346356;
+}
 body {
     background-color: var(--secondary-color);
     color: var(--text-color);
@@ -67,10 +70,11 @@ header {
     font-family: "Sarala";
     font-size: 3rem;
     margin-bottom: 1rem;
+    color:white
 }
 
 .hero-content p {
-    font-family: "Actor";
+    font-family: "Hind";
     font-size: 1.5rem;
     font-style: normal;
     margin-bottom: 2rem;
@@ -136,7 +140,7 @@ header {
 .service-card p,
 .service-card .service-icon,
 .service-card .btn {
-    margin: 1rem;
+    margin: 0.5rem;
 }
 
 /* Testimonials */
