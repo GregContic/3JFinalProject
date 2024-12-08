@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Mind & Mingle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Actor&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sarala:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #7C9A92;
+            --secondary-color: #F4EBE2;
+            --accent-color: #ac7b4a;
+            --text-color: #2C3639;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-family: "Sarala", sans-serif;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .services-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .services-banner h1 {
+            font-family: 'Sarala', sans-serif;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service-content h3 {
+            color: var(--primary-color);
+            font-family: 'Sarala', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-content p {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        .price {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .book-btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-btn:hover {
+            background-color: #346356;
+        }
+
+        .back-to-home {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .back-to-home:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Sarala', sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p {
+            margin-bottom: 0.5rem;
+        }
+
+        .social-links a {
+            color: white;
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .services-banner h1 {
+                font-size: 2rem;
+            }
+
+            .service-card {
+                margin: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-to-home">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+        <h1 class="logo">Mind & Mingle</h1>
+        <p class="tagline">Where Sanity Meets Serenity</p>
+    </header>
+
+    <div class="services-banner">
+        <h1>Our Services</h1>
+    </div>
+
+    <div class="container">
+        <div class="services-grid">
+            <!-- Individual Therapy -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80" alt="Individual Therapy">
+                </div>
+                <div class="service-content">
+                    <h3>Individual Therapy</h3>
+                    <p>One-on-one sessions tailored to your unique needs. Our experienced therapists provide a safe space for personal growth and healing.</p>
+                    <p class="price">From $120 per session</p>
+                    <a href="book_session.html" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Couples Therapy -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?w=800&q=80" alt="Couples Therapy">
+                </div>
+                <div class="service-content">
+                    <h3>Couples Therapy</h3>
+                    <p>Strengthen your relationship with professional guidance. Work through challenges and build a stronger connection together.</p>
+                    <p class="price">From $150 per session</p>
+                    <a href="book_session.html" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Group Therapy -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&q=80" alt="Group Therapy">
+                </div>
+                <div class="service-content">
+                    <h3>Group Therapy</h3>
+                    <p>Connect with others in a supportive group environment. Share experiences and learn from others on similar journeys.</p>
+                    <p class="price">From $80 per session</p>
+                    <a href="book_session.html" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Family Counseling -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80" alt="Family Counseling">
+                </div>
+                <div class="service-content">
+                    <h3>Family Counseling</h3>
+                    <p>Improve family dynamics and communication. Create a more harmonious home environment for all family members.</p>
+                    <p class="price">From $160 per session</p>
+                    <a href="book_session.html" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Stress Management -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80" alt="Stress Management">
+                </div>
+                <div class="service-content">
+                    <h3>Stress Management</h3>
+                    <p>Learn effective techniques to manage stress and anxiety. Develop coping strategies for a more balanced life.</p>
+                    <p class="price">From $100 per session</p>
+                    <a href="book_session.html" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Career Counseling -->
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="Career Counseling">
+                </div>
+                <div class="service-content">
+                    <h3>Career Counseling</h3>
+                    <p>Navigate career challenges and transitions. Get guidance on professional development and work-life balance.</p>
+                    <p class="price">From $110 per session</p>
+                    <a href="book_session.html" class="book-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> hello@mindandmingle.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Location</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Serenity Lane</p>
+                <p>Peaceful City, PC 12345</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
