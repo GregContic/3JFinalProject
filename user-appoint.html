@@ -1,0 +1,78 @@
+<?php include 'db.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Appointments</title>
+    <link rel="stylesheet" href="../css/dash.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Actor&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sarala:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+            <!--side bar-->
+            <aside class="sidebar">
+                <h2>Mind & Mingle</h2>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="cli-dash.html"><i class="fas fa-home"></i>Dashboard</a></li>
+                        <li><a href="#"><i class="fas fa-calendar-alt"></i>Appointments</a></li>
+                        <li><a href="promos.html"><i class="fa-solid fa-tags"></i>Promos and Discounts</a></li>
+                        <li><a href="settings.php"><i class="fas fa-cog"></i>Settings</a></li>
+                    </ul>
+                    <form action="logout.php" method="POST">
+                        <button type="submit" class="logout-btn"> <i class="fas fa-sign-out-alt"></i> Logout</button>
+                    </form>
+                </nav>
+            </aside>
+        <main class="main-content">
+            <header class="welcome-header">
+                <h1>Appointments</h1>
+            </header>
+            <div class="stats-grid">
+             <!--Would suggest lists here.-->
+             <div class="upcoming">
+                <h2>Upcoming Appointments</h2>
+                <table>
+                        <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Services</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                </table>
+                <span class="change-buttons">
+                    <form action="" method="">
+                        <button>Update</button>
+                    </form>
+                    <form action="" method="">
+                        <button>Cancel</button>
+                    </form>
+                </span>
+
+             </div>
+            
+             <div class="past">
+                <h2>Past Appointments</h2>
+                <table>
+                        <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Services</th>
+                        </tr>
+                        </thead>
+                </table>
+             </div>
+            </div>
+        
+        </main>
+    </div>
+</body>
+</html>

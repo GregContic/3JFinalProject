@@ -92,7 +92,7 @@ $connection->close();
         <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required />
     </div>
     <button type="submit" name="submit">Register</button>
-    <p class="sign_up">Already have an account? <a href="/cit17finalproject/php/login.php">Log In</a></p>
+    <p class="sign_up">Already have an account? <a href="/cit17finalproject/php/login.php" style="font-weight: bold;">Log In</a></p>
 </form>
 
     </div>

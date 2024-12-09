@@ -51,7 +51,7 @@ $connection->close();
     <title>Login | Mind & Mingle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Actor&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sarala:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sarala:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #7C9A92;
@@ -88,7 +88,7 @@ $connection->close();
         }
 
         .login_form h3 {
-            color: var(--primary-color);
+            color: #346356;
             font-family: 'Sarala', sans-serif;
             font-size: 2rem;
             margin-bottom: 1.5rem;
@@ -128,6 +128,7 @@ $connection->close();
             border: none;
             border-radius: 4px;
             font-size: 1rem;
+            font-weight: bold;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -165,7 +166,7 @@ $connection->close();
         }
 
         .back-to-home:hover {
-            color: var(--accent-color);
+            color: #346356;
         }
     </style>
     
@@ -186,7 +187,7 @@ $connection->close();
                 <input type="password" id="password" name="password" placeholder="Enter your password" required />
             </div>
             <button type="submit" name="submit">Login</button>
-            <p class="sign_up">Don't have an account? <a href="/cit17finalproject/php/register.php">Register</a></p>
+            <p class="sign_up">Don't have an account? <a href="/cit17finalproject/php/register.php" style="font-weight:bold">Register</a></p>
         </form>
     </div>
 </body>

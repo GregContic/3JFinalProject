@@ -1,7 +1,24 @@
 <?php
-include 'db.php';
-$sql = "SELECT * FROM services";
-$result = $conn->query($sql);
+include 'db.php'; // Ensure this file is correctly included
+
+// SQL query to select all services
+$result = $conn->query("SELECT * FROM services");
+
+if (!$result) {
+    die("Query failed: " . $conn->error);
+}
+
+// Fetch all services
+$services = $result->fetch_all(MYSQLI_ASSOC);
+
+// Close the connection
+$conn->close();
+
+// Display the services
+foreach ($services as $service) {
+    echo $service['service_name'] . "<br>";
+    echo $service['service_description'] . "<br><br>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

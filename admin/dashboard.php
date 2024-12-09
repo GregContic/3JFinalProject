@@ -31,8 +31,9 @@ $recentAppointments = $connection->query("SELECT a.*, u.name as client_name
     <title>Admin Dashboard | Mind & Mingle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Actor&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sarala:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sarala:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!--made css for dashboards (its called dash.css)-->
     <style>
         :root {
             --primary-color: #7C9A92;
@@ -78,10 +79,11 @@ $recentAppointments = $connection->query("SELECT a.*, u.name as client_name
 
         .nav-links {
             list-style: none;
+            font-weight: 500;
         }
 
         .nav-links li {
-            margin-bottom: 1rem;
+            margin-bottom: 0.3rem;
         }
 
         .nav-links a {
@@ -111,11 +113,12 @@ $recentAppointments = $connection->query("SELECT a.*, u.name as client_name
 
         .welcome-header {
             margin-bottom: 2rem;
+            margin-right: 200px;
         }
 
         .welcome-header h1 {
             font-family: 'Sarala', sans-serif;
-            color: var(--primary-color);
+            color: #346356;
             margin-bottom: 0.5rem;
         }
 
@@ -129,11 +132,14 @@ $recentAppointments = $connection->query("SELECT a.*, u.name as client_name
 
         .stat-card {
             background: white;
+            text-align: center;
             padding: 1.5rem;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
+        .stat-card h2{
+            color: #346356;
+        }
         .stat-card h3 {
             color: var(--accent-color);
             font-size: 2rem;
@@ -155,7 +161,7 @@ $recentAppointments = $connection->query("SELECT a.*, u.name as client_name
         }
 
         .recent-section h2 {
-            color: var(--primary-color);
+            color: #346356;
             margin-bottom: 1rem;
             font-family: 'Sarala', sans-serif;
         }
@@ -184,9 +190,12 @@ $recentAppointments = $connection->query("SELECT a.*, u.name as client_name
             bottom: 2rem;
             width: calc(100% - 4rem);
             padding: 1rem;
-            background-color: rgba(255, 255, 255, 0.1);
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-align: left;
+            background-color: var(--primary-color);
             color: white;
-            border: 1px solid white;
+            border: 1px solid transparent;
             border-radius: 5px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -206,10 +215,10 @@ $recentAppointments = $connection->query("SELECT a.*, u.name as client_name
             <nav>
                 <ul class="nav-links">
                     <li><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
-                    <li><a href="users.php"><i class="fas fa-users"></i> Users</a></li>
-                    <li><a href="appointments.php"><i class="fas fa-calendar-alt"></i> Appointments</a></li>
-                    <li><a href="services.php"><i class="fas fa-briefcase"></i> Services</a></li>
-                    <li><a href="settings.php"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li><a href="bookings.php"><i class="fa-solid fa-book"></i> Bookings </a></li>
+                    <li><a href="services.php"><i class="fa-solid fa-heart"></i> Services </a></li>
+                    <li><a href="schedules.php"><i class="fa-solid fa-calendar-days"></i> Schedule</a></li>
+                    <li><a href="transactions.php"><i class="fa-solid fa-file-invoice-dollar"></i> Payments <br>& Reports</a></li>
                 </ul>
             </nav>
             <form action="logout.php" method="POST">
